@@ -1,4 +1,4 @@
-# Getaways Hi
+# Getaways
 An app for booking amazing getaway vacations.
 
 ## Getting Started
