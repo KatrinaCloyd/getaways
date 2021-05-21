@@ -5,15 +5,32 @@ import {
   Switch,
 } from 'react-router-dom';
 import Getaways from '../../containers/Getaways';
+import Login from '../places/Login';
+import Logout from '../places/Logout';
 import PlaceDetail from '../places/PlaceDetail';
+import SignUp from '../places/SignUp';
+import Header from './Header';
 
 export default function App() {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route
           path='/'
           exact render={(routerProps) => <Getaways {...routerProps} />}
+        />
+        <Route
+          path='/register'
+          exact render={(routerProps) => <SignUp {...routerProps} />}
+        />
+        <Route
+          path='/login'
+          exact render={(routerProps) => <Login {...routerProps} />}
+        />
+        <Route
+          path='/logout'
+          exact render={(routerProps) => <Logout {...routerProps} />}
         />
         <Route
           path='/:id'

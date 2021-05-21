@@ -9,23 +9,40 @@ Flamingo:#ea526f
 body{
     background-color: white;
     color: #25ced1;
+    font-family: 'Rancho', cursive;
+    font-size: larger;
 }
 
 h3, h4, p{
     margin: 5px;
 }
 
-.placeList{
+.loader{
+    margin-top: 20px;
+}
+
+.placeList, .linksList{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.detailCard, .detailPg, .placeCard{
+.detailCard, .detailPg, .placeCard, .headerBar, .logPage, .loader, form{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+button{
+    background-color: #ea526f;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    color: white;
+    font-family: 'Rancho', cursive;
+    font-size: 16px;
 }
 
 .placeCard{
@@ -42,7 +59,7 @@ h3, h4, p{
     box-shadow: 2px 2px 5px #F8A08C;
 }
 
-.hotelName, li::marker{
+li::marker, .price {
     color: #ea526f;
 }
 
@@ -61,4 +78,23 @@ li, h4{
 a:link, a:visited {
     text-decoration: none;
     color: #25ced1;
+}
+
+.headerBar{
+    background-color: #25ced1;
+    color: white;
+    padding: 10px;
+}
+
+.linksList{
+    background-color: #F8A08C;
+    margin: 5px;
+    padding:10px;
+    width: 75%;
+    justify-content: space-around;
+    box-shadow: 5px 5px #ea526f;
+}
+
+.linksList a:link, .linksList a:visited{
+    color: white;
 }

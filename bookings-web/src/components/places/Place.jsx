@@ -23,7 +23,7 @@ const Place = ({
         <h3 className={style.hotelName}>{name}</h3>
         <p>{description}</p>
         <h4>{location}</h4>
-        <p>Price Per Night: ${pricePerNight}</p>
+        <p className={style.price}>Price Per Night: ${pricePerNight}</p>
         <img src={imageThumbnail} alt='getaway' className={style.detailImg} />
         <ul>
           <li>Max Guests: {maxGuests}</li>

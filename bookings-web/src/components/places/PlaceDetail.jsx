@@ -23,7 +23,7 @@ export default function PlaceDetail() {
                 <h3 className={style.hotelName}>{place.name}</h3>
                 <p>{place.description}</p>
                 <h4>{place.location}</h4>
-                <p>Price Per Night: ${place.pricePerNight}</p>
+                <p className={style.price}>Price Per Night: ${place.pricePerNight}</p>
                 <img src={place.image} alt='getaway' />
                 <ul>
                     <li>Max Guests: {place.maxGuests}</li>

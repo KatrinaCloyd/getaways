@@ -19,13 +19,15 @@ npm install
 npm start
 ```
 
-### Lab Ideas
+### Lab Ideas 6
 - [X] Add "Loading..." State (1 point)
 - [X] Style Places List (2 points)
-- [ ] Add Place Detail Page (3 points)
-- [ ] Add User Registration Page (2 points)
-- [ ] Add Login Page (2 points)
-- [ ] Add Logout Page (2 points)
+- [X] Add A Header (no points)
+- [X] Add Place Detail Page (3 points)
+- [X] Style Detail Page (no points)
+- [ ] Add User Registration Page (2 points) <-
+- [ ] Add Login Page (2 points) <-
+- [ ] Add Logout Page (2 points) <-
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add Places List Pagination (1 point)
@@ -34,4 +36,3 @@ npm start
 - [ ] Add "Create Booking" Page (4 points)
 - [ ] BE - Create "Cancel Booking" Endpoint (2 points)
 - [ ] Add "Cancel Booking" Page (2 points)
-- [ ] Add A Header (no points)
