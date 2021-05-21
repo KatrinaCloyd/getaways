@@ -11,6 +11,10 @@ body{
     color: #25ced1;
 }
 
+h3, h4, p{
+    margin: 5px;
+}
+
 .placeList{
     display: flex;
     flex-direction: row;
@@ -18,15 +22,24 @@ body{
     justify-content: center;
 }
 
-.placeCard{
+.detailCard, .detailPg, .placeCard{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    box-shadow: 2px 2px 5px #F8A08C;
+    flex-direction: column;
+    align-items: center;
+}
+
+.placeCard{
     margin: 10px;
     padding: 10px;
     width: 250px;
+    box-shadow: 2px 2px 5px #F8A08C;
+}
+
+.detailCard{
+    margin: 15px;
+    padding: 15px;
+    width: 75%;
+    box-shadow: 2px 2px 5px #F8A08C;
 }
 
 .hotelName, li::marker{
@@ -37,6 +50,15 @@ body{
     max-width: 220px
 }
 
+img{
+    max-width: 90%;
+}
+
 li, h4{
     color:#F8A08C
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #25ced1;
 }
