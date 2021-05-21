@@ -16,15 +16,17 @@ const Place = ({
 }) => {
   return (
     <div className={style.placeCard}>
-      <h3>{name}</h3>
+      <h3 className={style.hotelName}>{name}</h3>
       <p>{description}</p>
       <h4>{location}</h4>
       <p>Price Per Night: ${pricePerNight}</p>
       <img src={imageThumbnail} alt='getaway' className={style.detailImg} />
-      <p>Max Guests: {maxGuests}</p>
-      <p>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</p>
-      {pool ? <p>Has a Pool!</p> : null}
-      {wifi ? <p>Free Wifi</p> : null}
+      <ul>
+        <li>Max Guests: {maxGuests}</li>
+        <li>{petFriendly ? 'Pet Friendly' : 'No Pets Allowed'}</li>
+        {pool ? <li>Has a Pool!</li> : null}
+        {wifi ? <li>Free Wifi</li> : null}
+      </ul>
     </div>
   );
 };
