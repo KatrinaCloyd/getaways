@@ -13,6 +13,7 @@ export default function SignUp() {
     const handleSignUp = (e) => {
         e.preventDefault();
         //need to FIX this function
+        //'data and salt arguments required'
         registerNewUser(username, email, password)
             .then(setUser)
             .finally(() => setLoading(false));
