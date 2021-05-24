@@ -1,12 +1,17 @@
 export const registerNewUser = async (username, email, password) => {
     // console.log({ username, email, password })
     try {
-        const response = await fetch(`${process.env.BASE_URL}/users/create`, {
+        const rawResponse = await fetch(`${process.env.BASE_URL}/users/create`, {
             method: 'POST',
-            body: { username, email, password }
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, email, password })
         });
         // console.log(response);
-        return response.json();
+        const response = await rawResponse.json();
+        return response;
     } catch {
         throw new Error(await response.json());
     }
