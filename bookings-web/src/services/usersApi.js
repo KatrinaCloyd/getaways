@@ -9,7 +9,9 @@ export const registerNewUser = async (username, email, password) => {
             body: JSON.stringify({ username, email, password })
         });
         const response = await rawResponse.json();
-        return response;
+        const signedIn = await logInUser(response.email, password);
+        console.log(signedIn);
+        return signedIn;
     } catch {
         throw new Error(await response.json());
     }

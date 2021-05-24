@@ -25,13 +25,14 @@ npm start
 - [X] Add A Header (no points)
 - [X] Add Place Detail Page (3 points)
 - [X] Style Detail Page (no points)
-- [X] Add User Registration Page (2 points) (ADD CHECK FOR A COOKIE)
-- [X] Add Login Page (2 points) (ADD CHECK FOR A COOKIE)
-- [ ] Add Logout Page (2 points) <- will be as simple as clearning a cookie? 
-- [ ] Save User Info across pages until logout (no points)
+- [X] Add User Registration Page (2 points)
+- [X] Add Login Page (2 points)
+-----------------------------------
+- [X] Add Logout Page (2 points)
+- [ ] How do we check for a cookie? to make user pages conditional (no points)
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
-- [ ] Add Places List Pagination (1 point)
+- [ ] Add Places List Pagination (1 point) <--
 - [ ] BE - Add API Tests (1 point)
 - [ ] Add Front End Tests (3 points)
 - [ ] Add "Create Booking" Page (4 points)
