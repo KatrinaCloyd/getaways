@@ -17,6 +17,14 @@ export default function Login() {
             .finally(() => setLoading(false));
     }
 
+    const logedInUser = localStorage.getItem('USER');
+    if (logedInUser) return (
+        <div className={style.logPage}>
+            <h2>Hi {logedInUser}!</h2>
+            <p>Looks like you are already loged in. Click the Home button to view a list of destinations!</p>
+        </div>
+    );
+
     if (loading) return <Loading />
 
     if (user && user.username) return (

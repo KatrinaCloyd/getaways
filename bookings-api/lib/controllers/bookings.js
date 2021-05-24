@@ -5,6 +5,7 @@ const Booking = require('../models/Booking');
 const Place = require('../models/Place');
 
 module.exports = Router()
+  //create a new booking needs: user comes from verify token, body = start_date, end_date, and place_id
   .post('/create', verifyToken, async (req, res, next) => {
     try {
       const start_date = new Date(req.body.start_date);
@@ -43,14 +44,17 @@ module.exports = Router()
       next(err);
     }
   })
+  //get list of all bookings 
   .get('/', verifyToken, async (req, res, next) => {
     const bookings = await Booking.find({ user_id: req.user.id }).exec();
     res.json(bookings);
   })
+  //get booking for certail place by id
   .get('/:id', verifyToken, async (req, res, next) => {
     const booking = await Booking.findOne({ _id: req.params.id }).exec();
     res.send(booking);
   })
+  //update booking by id and user id, incomplete 
   .put('/:id', verifyToken, async (req, res, next) => {
     res.send('Updated');
   });

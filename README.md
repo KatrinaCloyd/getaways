@@ -20,6 +20,7 @@ npm start
 ```
 
 ### Lab Ideas 6
+---------------------------------- dev branch 
 - [X] Add "Loading..." State (1 point)
 - [X] Style Places List (2 points)
 - [X] Add A Header (no points)
@@ -27,14 +28,14 @@ npm start
 - [X] Style Detail Page (no points)
 - [X] Add User Registration Page (2 points)
 - [X] Add Login Page (2 points)
------------------------------------
+----------------------------------- dev 2 branch 
 - [X] Add Logout Page (2 points)
-- [ ] How do we check for a cookie? to make user pages conditional (no points)
+- [ ] Use local storage to make user pages conditional (no points)
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add Places List Pagination (1 point) <--
-- [ ] BE - Add API Tests (1 point)
+- [ ] BE - Add API Tests (1 point) <-- one point per test? (3)
 - [ ] Add Front End Tests (3 points)
-- [ ] Add "Create Booking" Page (4 points)
+- [ ] Add "Create Booking" Page (4 points) <--
 - [ ] BE - Create "Cancel Booking" Endpoint (2 points)
 - [ ] Add "Cancel Booking" Page (2 points)

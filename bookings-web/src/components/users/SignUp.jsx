@@ -9,11 +9,6 @@ export default function SignUp() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const token = document.cookie;
-
-    useEffect(() => {
-        console.log(token);
-    }, [token]);
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -22,6 +17,14 @@ export default function SignUp() {
             .then(setUser)
             .finally(() => setLoading(false));
     }
+
+    const logedInUser = localStorage.getItem('USER');
+    if (logedInUser) return (
+        <div className={style.logPage}>
+            <h2>Hi {logedInUser}!</h2>
+            <p>Looks like you are already loged in. Click the Home button to view a list of destinations!</p>
+        </div>
+    );
 
     if (loading) return <Loading />
 

@@ -29,6 +29,7 @@ export const logInUser = async (email, password) => {
             body: JSON.stringify({ email, password })
         });
         const response = await rawResponse.json();
+        localStorage.setItem('USER', response.username);
         return response;
     } catch {
         throw new Error(await response.json());
@@ -41,6 +42,7 @@ export const logOutUser = async () => {
             credentials: 'include'
         });
         const response = await rawResponse.json();
+        localStorage.removeItem('USER');
         return response;
     } catch {
         throw new Error(await response.json());
