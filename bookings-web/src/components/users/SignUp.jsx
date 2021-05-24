@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { registerNewUser } from '../../services/usersApi';
 import style from '../app/app.css';
 import Loading from '../app/Loading';
@@ -9,6 +9,11 @@ export default function SignUp() {
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const token = document.cookie;
+
+    useEffect(() => {
+        console.log(token);
+    }, [token]);
 
     const handleSignUp = (e) => {
         e.preventDefault();

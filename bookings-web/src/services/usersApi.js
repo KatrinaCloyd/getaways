@@ -32,3 +32,15 @@ export const logInUser = async (email, password) => {
         throw new Error(await response.json());
     }
 };
+
+export const logOutUser = async () => {
+    try {
+        const rawResponse = await fetch(`${process.env.BASE_URL}/users/logout`, {
+            credentials: 'include'
+        });
+        const response = await rawResponse.json();
+        return response;
+    } catch {
+        throw new Error(await response.json());
+    }
+};

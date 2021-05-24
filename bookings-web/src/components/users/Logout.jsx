@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { logOutUser } from '../../services/usersApi';
 import style from '../app/app.css';
 
 export default function Logout() {
@@ -9,17 +10,18 @@ export default function Logout() {
         e.preventDefault();
         //need to write this function
         //not sure where we will be getting the loged in user from yet or what log out returns 
-        logUserOut(user.username)
+        logOutUser()
             .then(setUser)
             .finally(() => setLoading(false));
     }
+    if (user && user.message) { console.log(user) }
 
     if (loading) return <Loading />
 
-    if (user) return (
+    if (user && user.message) return (
         <div className={style.logPage}>
-            <h2>Welcome {user.username}!</h2>
-            <p>Click the Home button to view a list of destinations!</p>
+            <h2>Visit Us Again Soon!</h2>
+            <p>{user.message}</p>
         </div>
     );
 
