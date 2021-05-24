@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Place from './Place';
-import style from '../app/app.css'
+import Place from '../components/places/Place';
+import style from '../components/app/app.css'
 
 const PlaceList = ({ places }) => {
   return (

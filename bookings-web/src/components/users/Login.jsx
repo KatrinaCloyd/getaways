@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
-import { registerNewUser } from '../../services/usersApi';
+import { logInUser } from '../../services/usersApi';
 import style from '../app/app.css';
 import Loading from '../app/Loading';
 
-export default function SignUp() {
+export default function Login() {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSignUp = (e) => {
+    const handleLogIn = (e) => {
         e.preventDefault();
         setLoading(true);
-        registerNewUser(username, email, password)
+        logInUser(email, password)
             .then(setUser)
             .finally(() => setLoading(false));
     }
 
     if (loading) return <Loading />
 
-    if (user) return (
+    if (user && user.username) return (
         <div className={style.logPage}>
             <h2>Welcome {user.username}!</h2>
             <p>Click the Home button to view a list of destinations!</p>
         </div>
     );
 
+    if (user && user.message) return (
+        <div className={style.logPage}>
+            <h2>Something went wrong.</h2>
+            <p>{user.message}</p>
+            <p>Click the Log In link in the header to try again.</p>
+        </div>
+    );
+
     return (
         <div className={style.logPage}>
-            <h3>Register Here as a New User!</h3>
-            <form onSubmit={handleSignUp} className={style.searchBox}>
-                <label htmlFor="username">Username:</label>
-                <input
-                    id="username"
-                    type="text"
-                    role="textbox"
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                /><br />
+            <h3>Oh Hullo! Welcome Back!</h3>
+            <form onSubmit={handleLogIn} className={style.searchBox}>
                 <label htmlFor="email">Email:</label>
                 <input
                     id="email"
@@ -55,7 +54,7 @@ export default function SignUp() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 /><br />
-                <button aria-label="signup">Submit</button>
+                <button aria-label="login">Log In!</button>
             </form>
         </div>
     )

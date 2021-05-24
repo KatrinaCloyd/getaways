@@ -5,10 +5,10 @@ import {
   Switch,
 } from 'react-router-dom';
 import Getaways from '../../containers/Getaways';
-import Login from '../places/Login';
-import Logout from '../places/Logout';
 import PlaceDetail from '../places/PlaceDetail';
-import SignUp from '../places/SignUp';
+import Login from '../users/Login';
+import Logout from '../users/Logout';
+import SignUp from '../users/SignUp';
 import Header from './Header';
 
 export default function App() {

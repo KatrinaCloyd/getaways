@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getPlaces } from '../services/placesApi';
-import PlaceList from '../components/places/PlaceList';
+import PlaceList from './PlaceList';
 import Loading from '../components/app/Loading';
 
 const Getaways = () => {

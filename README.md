@@ -25,9 +25,10 @@ npm start
 - [X] Add A Header (no points)
 - [X] Add Place Detail Page (3 points)
 - [X] Style Detail Page (no points)
-- [ ] Add User Registration Page (2 points) <-
-- [ ] Add Login Page (2 points) <-
-- [ ] Add Logout Page (2 points) <-
+- [X] Add User Registration Page (2 points)
+- [X] Add Login Page (2 points) 
+- [ ] Add Logout Page (2 points) <- not functional yet
+- [ ] Save User Info across pages until logout (no points)
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add Places List Pagination (1 point)
