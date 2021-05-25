@@ -1,4 +1,4 @@
-# Getaways Hi
+# Getaways
 An app for booking amazing getaway vacations.
 
 ## Getting Started
@@ -19,18 +19,21 @@ npm install
 npm start
 ```
 
-### Lab Ideas
-- [ ] Add "Loading..." State (1 point)
-- [ ] Style Places List (2 points)
-- [ ] Add Place Detail Page (3 points)
-- [ ] Add User Registration Page (2 points)
-- [ ] Add Login Page (2 points)
-- [ ] Add Logout Page (2 points)
-- [ ] Create "Edit User" Endpoint (1 point)
+### Lab Ideas 6
+- [X] Add "Loading..." State (1 point)
+- [X] Style Places List (2 points)
+- [X] Add A Header (no points)
+- [X] Add Place Detail Page (3 points)
+- [X] Style Detail Page (no points)
+- [X] Add User Registration Page (2 points) (ADD CHECK FOR A COOKIE)
+- [X] Add Login Page (2 points) (ADD CHECK FOR A COOKIE)
+- [ ] Add Logout Page (2 points) <- will be as simple as clearning a cookie? 
+- [ ] Save User Info across pages until logout (no points)
+- [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] Add Places List Pagination (1 point)
-- [ ] Add API Tests (1 point)
+- [ ] BE - Add API Tests (1 point)
 - [ ] Add Front End Tests (3 points)
 - [ ] Add "Create Booking" Page (4 points)
-- [ ] Create "Cancel Booking" Endpoint (2 points)
+- [ ] BE - Create "Cancel Booking" Endpoint (2 points)
 - [ ] Add "Cancel Booking" Page (2 points)

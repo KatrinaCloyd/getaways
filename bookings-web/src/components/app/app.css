@@ -1,0 +1,101 @@
+/* 
+teal:#25ced1,
+Ivory:#fefef4,
+coral:#F8A08C,
+orange:#ff7b47,
+Flamingo:#ea526f 
+*/
+
+body{
+    background-color: white;
+    color: #25ced1;
+    font-family: 'Rancho', cursive;
+    font-size: larger;
+}
+
+h3, h4, p{
+    margin: 5px;
+}
+
+.loader{
+    margin-top: 20px;
+}
+
+.placeList, .linksList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.detailCard, .detailPg, .placeCard, .headerBar, .logPage, .loader, form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    background-color: #ea526f;
+    border-radius: 3px;
+    border: none;
+    padding: 5px;
+    width: 100px;
+    color: white;
+    font-family: 'Rancho', cursive;
+    font-size: 16px;
+    box-shadow: 2px 2px 5px #F8A08C;
+}
+
+.placeCard{
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    box-shadow: 2px 2px 5px #F8A08C;
+}
+
+.detailCard{
+    margin: 15px;
+    padding: 15px;
+    width: 75%;
+    box-shadow: 2px 2px 5px #F8A08C;
+}
+
+li::marker, .price {
+    color: #ea526f;
+}
+
+.detailImg{
+    max-width: 220px
+}
+
+img{
+    max-width: 90%;
+}
+
+li, h4{
+    color:#F8A08C
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: #25ced1;
+}
+
+.headerBar{
+    background-color: #25ced1;
+    color: white;
+    padding: 10px;
+}
+
+.linksList{
+    background-color: #F8A08C;
+    margin: 5px;
+    padding:10px;
+    width: 75%;
+    justify-content: space-around;
+    box-shadow: 5px 5px #ea526f;
+}
+
+.linksList a:link, .linksList a:visited{
+    color: white;
+}
