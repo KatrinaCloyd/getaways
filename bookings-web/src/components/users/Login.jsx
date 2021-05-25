@@ -21,18 +21,12 @@ export default function Login() {
     if (logedInUser) return (
         <div className={style.logPage}>
             <h2>Hi {logedInUser}!</h2>
-            <p>Looks like you are already loged in. Click the Home button to view a list of destinations!</p>
+            <p>Looks like you are already logged in! </p>
+            <p>Click the Home button to browse our destinations.</p>
         </div>
     );
 
     if (loading) return <Loading />
-
-    if (user && user.username) return (
-        <div className={style.logPage}>
-            <h2>Welcome {user.username}!</h2>
-            <p>Click the Home button to view a list of destinations!</p>
-        </div>
-    );
 
     if (user && user.message) return (
         <div className={style.logPage}>
