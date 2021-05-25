@@ -8,13 +8,10 @@ export default function Logout() {
 
     const handleLogOut = (e) => {
         e.preventDefault();
-        //need to write this function
-        //not sure where we will be getting the loged in user from yet or what log out returns 
         logOutUser()
             .then(setUser)
             .finally(() => setLoading(false));
     }
-    if (user && user.message) { console.log(user) }
 
     if (loading) return <Loading />
 

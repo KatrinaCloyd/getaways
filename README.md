@@ -31,11 +31,12 @@ npm start
 ----------------------------------- dev 2 branch 
 - [X] Add Logout Page (2 points)
 - [ ] Add Places List Pagination (1 point) <--
-- [ ] Use local storage to make user pages conditional (no points)
+- [ ] Add "Create Booking" Page (4 points) <--
+- [ ] Add Front End Tests (3 points) <--
+- [ ] Use local storage to make header options conditional (no points)
+
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
-- [ ] BE - Add API Tests (1 point) <-- one point per test? (3)
-- [ ] Add Front End Tests (3 points)
-- [ ] Add "Create Booking" Page (4 points) <--
+- [ ] BE - Add API Tests (1 point) one point per test? (3)
 - [ ] BE - Create "Cancel Booking" Endpoint (2 points)
 - [ ] Add "Cancel Booking" Page (2 points)
