@@ -10,6 +10,7 @@ export default function Logout({ user, setUser }) {
         logOutUser()
             .then(setUser)
             .finally(() => setLoading(false));
+        window.location.replace("/");
     }
 
     if (loading) return <Loading />

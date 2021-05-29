@@ -30,10 +30,9 @@ npm start
 - [X] Add Login Page (2 points)
 ----------------------------------- dev 2 branch 
 - [X] Add Logout Page (2 points)
-- [ ] Add "Create Booking" Page (4 points) <--
-- [ ] Add Front End Tests (3 points) <--
-- [ ] Use local storage to make header options conditional (no points)
-
+- [X] Use STATE in main app file to make header options conditional (no points)
+- [ ] Add "Create Booking" Page (4 points) 
+- [ ] Add Front End Tests (3 points) 
 - [ ] BE - Create "Edit User" Endpoint (1 point)
 - [ ] Create "Edit User" Page (2 points)
 - [ ] BE - Add API Tests (1 point) one point per test? (3)
