@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { logOutUser } from '../../services/usersApi';
 import style from '../app/app.css';
 
-export default function Logout() {
-    const [user, setUser] = useState(null);
+export default function Logout({ user, setUser }) {
     const [loading, setLoading] = useState(false);
 
     const handleLogOut = (e) => {
@@ -24,7 +23,7 @@ export default function Logout() {
 
     return (
         <div className={style.logPage}>
-            <h3>See ya Next Time!</h3>
+            <h3>See ya Next Time, {user.username}!</h3>
             <button onClick={handleLogOut}>Log Out</button>
         </div>
     )

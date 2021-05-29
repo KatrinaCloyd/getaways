@@ -3,8 +3,7 @@ import { logInUser } from '../../services/usersApi';
 import style from '../app/app.css';
 import Loading from '../app/Loading';
 
-export default function Login() {
-    const [user, setUser] = useState(null);
+export default function Login({ user, setUser }) {
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -17,16 +16,15 @@ export default function Login() {
             .finally(() => setLoading(false));
     }
 
-    const logedInUser = localStorage.getItem('USER');
-    if (logedInUser) return (
+    if (loading) return <Loading />
+
+    if (user && user.username) return (
         <div className={style.logPage}>
-            <h2>Hi {logedInUser}!</h2>
+            <h2>Hi {user.username}!</h2>
             <p>Looks like you are already logged in! </p>
             <p>Click the Home button to browse our destinations.</p>
         </div>
     );
-
-    if (loading) return <Loading />
 
     if (user && user.message) return (
         <div className={style.logPage}>

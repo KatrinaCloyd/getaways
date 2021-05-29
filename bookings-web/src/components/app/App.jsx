@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
   Route,
@@ -12,9 +12,12 @@ import SignUp from '../users/SignUp';
 import Header from './Header';
 
 export default function App() {
+
+  const [user, setUser] = useState(null);
+
   return (
     <Router>
-      <Header />
+      <Header user={user} />
       <Switch>
         <Route
           path='/'
@@ -22,15 +25,15 @@ export default function App() {
         />
         <Route
           path='/register'
-          exact render={(routerProps) => <SignUp {...routerProps} />}
+          exact render={(routerProps) => <SignUp {...routerProps} setUser={setUser} user={user} />}
         />
         <Route
           path='/login'
-          exact render={(routerProps) => <Login {...routerProps} />}
+          exact render={(routerProps) => <Login {...routerProps} setUser={setUser} user={user} />}
         />
         <Route
           path='/logout'
-          exact render={(routerProps) => <Logout {...routerProps} />}
+          exact render={(routerProps) => <Logout {...routerProps} setUser={setUser} user={user} />}
         />
         <Route
           path='/:id'

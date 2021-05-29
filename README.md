@@ -30,7 +30,6 @@ npm start
 - [X] Add Login Page (2 points)
 ----------------------------------- dev 2 branch 
 - [X] Add Logout Page (2 points)
-- [ ] Add Places List Pagination (1 point) <--
 - [ ] Add "Create Booking" Page (4 points) <--
 - [ ] Add Front End Tests (3 points) <--
 - [ ] Use local storage to make header options conditional (no points)
@@ -40,3 +39,7 @@ npm start
 - [ ] BE - Add API Tests (1 point) one point per test? (3)
 - [ ] BE - Create "Cancel Booking" Endpoint (2 points)
 - [ ] Add "Cancel Booking" Page (2 points)
+- [ ] BE - Add Places List Pagination - API (2 points)
+- [ ] Add Places List Pagination - client (2 points)
+- [ ] Prevent duplicate users from being created (1 point)
+- [ ] Require email, username, and password when creating a new user (1 point)

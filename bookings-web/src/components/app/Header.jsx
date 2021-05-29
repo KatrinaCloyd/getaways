@@ -2,7 +2,7 @@ import React from 'react';
 import style from './app.css';
 import { Link } from 'react-router-dom';
 
-export default function Header() {
+export default function Header({ user }) {
 
     return (
         <div className={style.headerBar}>
@@ -11,47 +11,18 @@ export default function Header() {
                 <Link to={'/'}>
                     Home
                 </Link>
-                <Link to={'/register'}>
-                    Sign Up
+                {(user && user.username) &&
+                    <Link to={'/logout'}>
+                        Log Out
+                </Link>}
+                {(!user || user.message) && <>
+                    <Link to={'/register'}>
+                        Sign Up
                 </Link>
-                <Link to={'/login'}>
-                    Log In
-                </Link>
-                <Link to={'/logout'}>
-                    Log Out
-                </Link>
+                    <Link to={'/login'}>
+                        Log In
+                    </Link> </>}
             </div>
         </div>
     )
-
-    // if (localStorage.getItem('USER')) return (
-    //     <div className={style.headerBar}>
-    //         <h1>We Need a Getaway!</h1>
-    //         <div className={style.linksList}>
-    //             <Link to={'/'}>
-    //                 Home
-    //             </Link>
-    //             <Link to={'/logout'}>
-    //                 Log Out
-    //             </Link>
-    //         </div>
-    //     </div>
-    // )
-
-    // return (
-    //     <div className={style.headerBar}>
-    //         <h1>We Need a Getaway!</h1>
-    //         <div className={style.linksList}>
-    //             <Link to={'/'}>
-    //                 Home
-    //             </Link>
-    //             <Link to={'/register'}>
-    //                 Sign Up
-    //             </Link>
-    //             <Link to={'/login'}>
-    //                 Log In
-    //             </Link>
-    //         </div>
-    //     </div>
-    // )
 };

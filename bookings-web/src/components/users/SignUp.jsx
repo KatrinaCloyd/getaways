@@ -3,8 +3,7 @@ import { registerNewUser } from '../../services/usersApi';
 import style from '../app/app.css';
 import Loading from '../app/Loading';
 
-export default function SignUp() {
-    const [user, setUser] = useState(null);
+export default function SignUp({ user, setUser }) {
     const [loading, setLoading] = useState(false);
     const [username, setUsername] = useState('');
     const [email, setEmail] = useState('');
@@ -18,10 +17,9 @@ export default function SignUp() {
             .finally(() => setLoading(false));
     }
 
-    const logedInUser = localStorage.getItem('USER');
-    if (logedInUser) return (
+    if (user && user.username) return (
         <div className={style.logPage}>
-            <h2>Hi {logedInUser}!</h2>
+            <h2>Hi {user.username}!</h2>
             <p>Looks like you are already signed up and logged in! </p>
             <p>Click the Home button to browse our destinations.</p>
         </div>
